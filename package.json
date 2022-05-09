@@ -4,7 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node backend/server.js",
+    "server": "node backend/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,15 +15,18 @@
     "url": "git+https://github.com/husnilmaarif/FINAL-PROJECT-EDUWORK.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Husnil Maarif",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/husnilmaarif/FINAL-PROJECT-EDUWORK/issues"
   },
   "homepage": "https://github.com/husnilmaarif/FINAL-PROJECT-EDUWORK#readme",
   "dependencies": {
+    "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "mongoose": "^6.3.1",
+    "nodemon": "^2.0.16",
     "router": "^1.3.6"
   }
 }
