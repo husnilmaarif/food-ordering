@@ -1,0 +1,78 @@
+body {
+  background-color: #eae9ea;
+}
+
+.container-1 {
+  background-color: white;
+  margin: 5vh 35%;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+  border: 2px solid #e3e3e3;
+}
+
+/* img.instagram {
+  margin: 15px;
+  padding: 10px;
+} */
+
+.input {
+  font-size: 15px;
+  padding: 13px;
+  width: 75%;
+  background-color: #eae9ea;
+  border-radius: 5px;
+  color: grey;
+  border: 2px solid #e3e3e3;
+}
+
+.login {
+  font-size: 15px;
+  padding: 10px;
+  background-color: #1d9af0;
+  width: 85%;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #1d9af0;
+}
+
+hr {
+  margin: 20px 50px;
+}
+
+/* img.facebook {
+  align-items: center;
+  padding: 10px;
+  margin-left: 100px;
+} */
+
+.facebook {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.forgot-pass {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.container-2 {
+  background-color: white;
+  margin: 10px 35%;
+  text-align: center;
+  display: block;
+  border: 2px solid #e3e3e3;
+}
+
+.signup {
+  font-size: 15px;
+  padding: 30px;
+}
+
+a {
+  text-decoration: none;
+}

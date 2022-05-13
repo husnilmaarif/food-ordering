@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+/* * {
+  border: solid salmon;
+} */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* navbar */
+.nav-link {
+  color: white !important;
+}
+
+/* cards */
+.card-img-top {
+  cursor: pointer;
+}
+
+.card-img-top:hover {
+  background-color: blue;
+  opacity: 0.5;
+}
+
+/* homepage */
+.daftar-menu {
+  border-bottom: 3px solid black;
+}
+
+/* register */
+.button-register {
+  text-align: end;
+}
