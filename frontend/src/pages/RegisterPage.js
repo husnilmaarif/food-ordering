@@ -42,14 +42,39 @@ function RegisterPage() {
 
             <h1 className="text-center">Registrasi</h1>
             <form className="mt-3 text-center">
-              <input type="text" placeholder="name" className="form-control mt-2" value={name} onChange={(e) => setName(e.target.value)} />
-              <input type="email" placeholder="email" className="form-control mt-2" value={email} onChange={(e) => setEmail(e.target.value)} />
-              <input type="password" placeholder="password" className="form-control mt-2" value={password} onChange={(e) => setPassword(e.target.value)} />
-              <input type="password" placeholder="confirm password" className="form-control mt-2" value={cpassword} onChange={(e) => setCpassword(e.target.value)} />
-              <button className="btn btn-primary mt-3 " onClick={register}>
+              <input
+                type="text"
+                placeholder="name"
+                className="form-control mt-2"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="email"
+                className="form-control mt-2"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="password"
+                className="form-control mt-2"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="confirm password"
+                className="form-control mt-2"
+                value={cpassword}
+                onChange={(e) => setCpassword(e.target.value)}
+              />
+              <button className="btn btn-primary mt-3" onClick={register}>
                 Kirim
               </button>
-              <Link className="mt-3" to="/login">
+              <br />
+              <Link className="mt-5" to="/login">
                 kembali ke halaman login
               </Link>
             </form>

@@ -10,7 +10,6 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const loginState = useSelector((state) => state.loginUserReducer);
   const { error, loading } = loginState;
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -45,9 +44,7 @@ function LoginPage() {
           </form>
           <p className="mt-2">
             belum punya akun? silahkan{" "}
-            <a>
-              <Link to="/register">registrasi</Link>
-            </a>
+              <Link to="/register" style={{textDecoration: 'solid', color: 'blue'}}>registrasi</Link>
           </p>
         </div>
       </div>
