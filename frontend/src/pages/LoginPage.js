@@ -9,6 +9,7 @@ function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const loginState = useSelector((state) => state.loginUserReducer);
+  const { error, loading } = loginState;
 
   const dispatch = useDispatch();
 
