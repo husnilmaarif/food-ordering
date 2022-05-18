@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../actions/productActions";
 import { Form, FormControl, Button } from "react-bootstrap";
 import Cards from "../components/Cards";
+import Loading from "../components/Loading";
+import Error from "../components/Error";
 // import DataProducts from "../products";
 
 export default function HomePage() {
@@ -32,9 +34,9 @@ export default function HomePage() {
       </div>
       <div className="row">
         {loading ? (
-          <h1>Loading..</h1>
+          <Loading />
         ) : error ? (
-          <h1>Something went wrong!</h1>
+          <Error error="Terjadi kesalahan!" />
         ) : (
           products.map((product) => {
             return (

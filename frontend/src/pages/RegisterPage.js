@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { registerUser } from "../actions/userActions";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
+import Success from "../components/Success";
+import Error from "../components/Error";
 
 function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
+  const registerState = useSelector((state) => state.registerUserReducer);
+  const { error, loading, success } = registerState;
 
   const dispatch = useDispatch();
 
@@ -30,6 +35,11 @@ function RegisterPage() {
       <div className="container">
         <div className="row justify-content-center mt-5">
           <div className="col-md-4">
+            {/* alert loading, success, error */}
+            {loading && <Loading />}
+            {success && <Success success="Registrasi berhasil" />}
+            {error && <Error error="Email telah digunakan" />}
+
             <h1 className="text-center">Registrasi</h1>
             <form className="mt-3 text-center">
               <input type="text" placeholder="name" className="form-control mt-2" value={name} onChange={(e) => setName(e.target.value)} />
@@ -39,6 +49,9 @@ function RegisterPage() {
               <button className="btn btn-primary mt-3 " onClick={register}>
                 Kirim
               </button>
+              <Link className="mt-3" to="/login">
+                kembali ke halaman login
+              </Link>
             </form>
           </div>
         </div>
