@@ -70,13 +70,14 @@ function RegisterPage() {
                 value={cpassword}
                 onChange={(e) => setCpassword(e.target.value)}
               />
-              <button className="btn btn-primary mt-3" onClick={register}>
+              <button
+                className="btn btn-primary mt-3 mb-3 w-100"
+                onClick={register}
+              >
                 Kirim
               </button>
               <br />
-              <Link className="mt-5" to="/login">
-                kembali ke halaman login
-              </Link>
+              <Link to="/login">kembali ke halaman login</Link>
             </form>
           </div>
         </div>

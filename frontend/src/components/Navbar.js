@@ -39,8 +39,8 @@ export default function Navbar() {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Profil</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Keluar</Dropdown.Item>
+                    <Dropdown.Item href="#">Profil</Dropdown.Item>
+                    <Dropdown.Item href="#">Keluar</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               ) : (
@@ -48,11 +48,6 @@ export default function Navbar() {
                   Masuk
                 </Link>
               )}
-
-              {/* <NavDropdown title={currentUser.name} id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#">Pesan</NavDropdown.Item>
-                  <NavDropdown.Item onClick={() => dispatch(logoutUser())}>Keluar</NavDropdown.Item>
-                </NavDropdown> */}
 
               <Link className="nav-link" to="/cart">
                 Pesanan
