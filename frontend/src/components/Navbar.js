@@ -1,7 +1,7 @@
 import React from "react";
-// import { logoutUser } from "../actions/userActions";
+import { logoutUser } from "../actions/userActions";
 import { Dropdown } from "react-bootstrap";
-import { useSelector } from "react-redux"; //useDispatch
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FcShop } from "react-icons/fc";
 
@@ -9,7 +9,7 @@ export default function Navbar() {
   const cartState = useSelector((state) => state.cartReducer);
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
-  // const dispatch = useDisptach();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -40,7 +40,12 @@ export default function Navbar() {
 
                   <Dropdown.Menu>
                     <Dropdown.Item href="#">Profil</Dropdown.Item>
-                    <Dropdown.Item href="#">Keluar</Dropdown.Item>
+                    <Dropdown.Item
+                      href="/login"
+                      onClick={() => dispatch(logoutUser())}
+                    >
+                      Keluar
+                    </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               ) : (
